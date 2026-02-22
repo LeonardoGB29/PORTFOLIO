@@ -39,18 +39,20 @@ export const SITE_INFO: SiteInfo = {
     "Construyo APIs y sistemas orientados a datos, con enfoque en arquitectura modular, pruebas básicas y documentación clara.",
   aboutLeftTitle: "QUIÉN SOY",
   aboutLeftItems: [
-    "Estudiante de Ciencia de la Computación en la Universidad Nacional de San Agustín de Arequipa (Arequipa, Perú).",
+    "Tengo 21 años y estudio Ciencia de la Computación en la Universidad Nacional de San Agustín de Arequipa (Arequipa, Perú).",
     "Me interesa construir sistemas que conecten backend, datos y una arquitectura clara, con foco en aplicaciones reales.",
     "Enfoque: backend + data",
     "Intereses: APIs, SQL, performance (C++/MPI)",
     "Actualmente: fortaleciendo proyectos y portafolio para prácticas"
   ],
+
   aboutRightTitle: "CÓMO TRABAJO",
   aboutRightItems: [
-    "Arquitectura modular: capas, responsabilidades y nombres claros",
-    "APIs REST consistentes: validación, errores estandarizados, endpoints limpios",
-    "SQL con criterio: modelado relacional, joins y agregaciones cuando aportan valor",
-    "Calidad mínima real: pruebas para lo crítico + checks simples"
+    "Trabajo por tareas pequeñas: backlog → in progress → done, con entregables claros",
+    "Primero hago que funcione end-to-end y luego refactorizo (sin romper lo que ya sirve)",
+    "Separo responsabilidades: módulos/capas, nombres claros y lógica fuera de la UI/controladores",
+    "Defino “done” así: corre local, se puede probar, cubre casos básicos y edge cases principales",
+    "Dejo todo replicable: README con setup, comandos, ejemplos y resultados cuando aplica"
   ],
   footerTitle: "Contáctame",
   footerCreditLabel: "github.com/LeonardoGB29",
@@ -63,6 +65,7 @@ export const GENERAL_INFO = {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { name: "github", url: "https://github.com/LeonardoGB29" },
+  { name: "linkedin", url: "https://www.linkedin.com/in/leonardo-gaona-briceño-810a17174" },
   { name: "email", url: "mailto:leogustavo.gb29@gmail.com" }
 ];
 
@@ -204,14 +207,14 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: "jaiio-2025",
     company: "JAIIO 2025 - UBA (Buenos Aires, Argentina)",
     title: "Asistente en charlas, talleres y networking académico",
-    startDate: "2025",
+    startDate: "",
     endDate: "2025"
   },
   {
     id: "ielts-2025",
     company: "IELTS Academic",
     title: "IELTS Academic 5.0 - Inglés intermedio",
-    startDate: "2025",
+    startDate: "",
     endDate: "2025"
   }
 ];
@@ -290,21 +293,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "project-4",
-    slug: "simulador-almacenamiento-disco-cpp",
-    name: "Simulador de almacenamiento en disco",
-    year: 2024,
-    techStack: ["C++", "Storage", "Slotted Page"],
-    thumbnail:
-      "https://images.unsplash.com/photo-1562408590-e32931084e23?w=900&q=80&auto=format&fit=crop",
-    image:
-      "https://images.unsplash.com/photo-1531498860502-7c67cf02f657?w=1400&q=80&auto=format&fit=crop",
-    sourceCode: "https://github.com/LeonardoGB29/Megatron3000",
+    slug: "tienda-online-flutter-python",
+    name: "Tienda Online (Flutter + Python API)",
+    year: 2025,
+    techStack: ["Python", "REST API", "Postman", "Docker", "Flutter (equipo)"],
+    thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop",
+    sourceCode: "https://github.com/DanielfQo/Tienda_online",
     description:
-      "Simulación de almacenamiento por páginas (slotted page): inserción, búsqueda y manejo de offsets/fragmentación.",
+      "Proyecto en equipo: app móvil en Flutter conectada a una API en Python. Mi aporte fue el backend: endpoints REST, pruebas con Postman y soporte de ejecución local (docker).",
     features: [
-      "Inserción y búsqueda sobre páginas",
-      "Gestión de offsets y fragmentación",
-      "Modelo tipo slotted page"
+      "Backend contributor (Python REST)",
+      "Pruebas de endpoints con Postman",
+      "Ejecución local con Docker Compose"
     ]
   }
 ];

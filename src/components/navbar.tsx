@@ -22,12 +22,12 @@ const MENU_LINKS = [
     visible: true
   },
   {
-    name: "About Me",
+    name: "Perfil",
     url: "#about-me",
     visible: SECTION_FLAGS.showAbout
   },
   {
-    name: "Experience",
+    name: "Educación",
     url: "#my-experience",
     visible: SECTION_FLAGS.showExperience
   },
@@ -43,6 +43,13 @@ export default function Navbar() {
   const lenis = useLenis();
   const pathname = usePathname();
   const router = useRouter();
+
+  const resolveExternalUrl = (url: string) => {
+    if (!url) return "#";
+    if (url.startsWith("mailto:")) return url;
+    if (/^https?:\/\//i.test(url)) return encodeURI(url);
+    return encodeURI(`https://${url}`);
+  };
 
   const handleClick = (target: string) => {
     const isHome = pathname === "/" || pathname === "";
@@ -133,7 +140,7 @@ export default function Navbar() {
                 {SOCIAL_LINKS.map((link) => (
                   <li key={link.name}>
                     <a
-                      href={link.url}
+                      href={resolveExternalUrl(link.url)}
                       target="_blank"
                       rel="noreferrer noopener"
                       className="text-lg capitalize hover:underline"
