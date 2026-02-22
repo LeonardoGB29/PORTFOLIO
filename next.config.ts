@@ -4,10 +4,7 @@ const repository = process.env.GITHUB_REPOSITORY ?? "";
 const repositoryName = repository.split("/")[1] ?? "";
 const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
 const isUserOrOrgPage = repositoryName.endsWith(".github.io");
-const basePath =
-  isGitHubActions && repositoryName && !isUserOrOrgPage
-    ? `/${repositoryName}`
-    : "";
+const basePath = isGitHubActions && repositoryName && !isUserOrOrgPage ? `/${repositoryName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",

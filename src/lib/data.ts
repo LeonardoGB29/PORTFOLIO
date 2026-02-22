@@ -1,4 +1,6 @@
-﻿import type {
+﻿import { withBasePath } from "@/src/lib/basePath";
+
+import type {
   ExperienceItem,
   Project,
   SiteInfo,
@@ -24,7 +26,7 @@ export const SITE_INFO: SiteInfo = {
   birthDate: "2004-12-29",
   introKicker: "Hola, soy",
   introDisplayName: "Leonardo Gaona Briceño",
-  introImage: "/images/me.jpg",
+  introImage: withBasePath("/images/me.jpg"),
   introImageAlt: "",
   heroTitleTop: "FULL STACK",
   heroTitleBottom: "DEVELOPER",
@@ -231,9 +233,9 @@ export const PROJECTS: Project[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop",
     galleryImages: [
-      "/images/projects/epcc/epcc1.png",
-      "/images/projects/epcc/epcc2.png",
-      "/images/projects/epcc/epcc3.png"
+      withBasePath("/images/projects/epcc/epcc1.png"),
+      withBasePath("/images/projects/epcc/epcc2.png"),
+      withBasePath("/images/projects/epcc/epcc3.png")
     ],
     sourceCode: "https://github.com/LeonardoGB29/Sistema_Academico_EPCC",
     description:
@@ -272,9 +274,9 @@ export const PROJECTS: Project[] = [
     thumbnail: 
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop",
     galleryImages: [
-      "/images/projects/hpc/run_1.png",
-      "/images/projects/hpc/run_2.png",
-      "/images/projects/hpc/tiempos_log.jpeg"
+      withBasePath("/images/projects/hpc/run_1.png"),
+      withBasePath("/images/projects/hpc/run_2.png"),
+      withBasePath("/images/projects/hpc/tiempos_log.jpeg")
     ],
     sourceCode:
       "https://github.com/LeonardoGB29/A-Locality-Aware-Bruck-Allgather",

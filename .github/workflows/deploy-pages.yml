@@ -1,5 +1,8 @@
 name: Deploy To GitHub Pages
 
+env:
+  NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+ 
 on:
   push:
     branches:
